@@ -1,0 +1,22 @@
+<h2><%= title %></h2>
+
+<form class="note-form" action="/add" method="POST">
+    <input type="text" name="title" placeholder="Note Title" required>
+    <textarea name="content" placeholder="Note Content" required></textarea>
+    <button type="submit">Add Note</button>
+</form>
+
+<!-- Display notes -->
+<ul class="notes-list">
+    <% notes.forEach(note => { %>
+        <li class="note-item">
+            <div class="note-content">
+                <h3><%= note.title %></h3>
+                <p><%= note.content %></p>
+            </div>
+            <form action="/delete/<%= note._id %>" method="POST">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>

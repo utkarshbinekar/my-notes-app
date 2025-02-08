@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.app-header {
+    background: #1f1f1f; /* Darker header background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #bb86fc; /* Light purple border */
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Larger font size for the title */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #bb86fc; /* Light purple for links */
+    text-decoration: none;
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main Content Styles */
+.main {
+    background: #1e1e1e; /* Slightly lighter background for main content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Notes List Styles */
+.notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between content and delete button */
+    align-items: center; /* Center items vertically */
+    border: 1px solid #333; /* Border for note items */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px; /* Rounded corners */
+    background: #2a2a2a; /* Darker background for note items */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.note-item:hover {
+    background: #3a3a3a; /* Change background on hover */
+}
+
+.note-content {
+    flex-grow: 1; /* Allow content to take up available space */
+}
+
+.note-item h3 {
+    margin: 0;
+    color: #bb86fc; /* Light purple for note titles */
+    font-size: 1.5em; /* Larger font size for titles */
+}
+
+.note-item p {
+    color: #e0e0e0; /* Light text for note content */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+/* Form Styles */
+.note-form {
+    margin-top: 20px;
+}
+
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px;
+    background: #333; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+    border-color: #bb86fc; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+.note-form button {
+    background: #bb86fc; /* Light purple button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+    font-weight: bold; /* Bold text for buttons */
+}
+
+.note-form button:hover {
+    background: #9b59b6; /* Darker purple on hover */
+}
+
+/* Delete Button Styles */
+.delete-button {
+    background: #e53935; /* Red for delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+    font-weight: bold; /* Bold text for delete button */
+}
+
+.delete-button:hover {
+    background: #c62828; /* Darker red on hover */
+}
+
+/* Footer Styles */
+.app-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #1f1f1f; /* Dark footer background */
+    color: #e0e0e0; /* Light text */
+    border-top: 1px solid #333; /* Subtle border */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .app-header h1 {
+        font-size: 2em; /* Smaller title on mobile */
+    }
+
+    .note-item h3 {
+        font-size: 1.2em; /* Smaller title for notes on mobile */
+    }
+}
